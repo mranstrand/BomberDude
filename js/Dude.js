@@ -20,6 +20,10 @@ Dude.prototype.render = function(ctx){
     
 }
 
+Dude.prototype.placeBomb = function(){
+    bombs.push(new Bomb(this.x, this.y, "ticking", 1000, 3));
+    console.log("bomb placed");
+}
 
 Dude.prototype.updatePositions = function(stage){
     

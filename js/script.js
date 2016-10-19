@@ -1,6 +1,7 @@
 var canvas, 
     ctx, 
     dudes = [new Dude(50,50)], 
+    bombs = [new Bomb(100, 100, "ticking", 1000, 3)],
     stages = [new Stage()],
     currrentStage = 0;
 
@@ -30,14 +31,14 @@ function updatePositions(){
 
 function renderObjects(){
     
-    stages[0].render(ctx)
+    stages[0].render(ctx);
     dudes[0].render(ctx);
+    bombs[0].render(ctx);
     
 }
 
 function keyDown(e){
     
-    console.log(e.keyCode);
     if(e.keyCode == 37){
         //Vänster
         dudes[0].vx = -dudes[0].speed;
@@ -58,6 +59,11 @@ function keyDown(e){
         dudes[0].vx = 0;
         dudes[0].vy = dudes[0].speed;
     } 
+    if(e.keyCode == 32){
+        //Placera bomb
+        dudes[0].placeBomb();
+        
+    }
 }
 
 function keyUp(e){

@@ -1,0 +1,23 @@
+<html>
+    <body>
+    
+        <canvas height="500" width="600" id="c"></canvas>
+        
+        <script>
+            var canvas = document.getElementById("c");
+            var ctx = canvas.getContext("2d");
+            
+            ctx.fillRect(10, 300, 10, 100);
+            ctx.fillRect(580, 200, 10, 100);
+            
+            ctx.beginPath()
+            ctx.arc(300, 250, 4, 0, 7);
+            ctx.fill();
+            ctx.closePath();
+            
+        </script>
+    
+        
+    </body>
+
+</html>

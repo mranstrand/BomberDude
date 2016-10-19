@@ -49,8 +49,6 @@ Stage.prototype.getTileType = function(x, y){
     var xIndex = Math.floor(x / this.tileWidth);
     var yIndex = Math.floor(y / this.tileHeight);
     
-    
-    console.log(this.map[yIndex][xIndex] + "   y: " + y);
     return this.map[yIndex][xIndex];
     
 }
